@@ -35,7 +35,8 @@ class Program(models.Model):
                                            'url': name, 'datas': record.brochure, 
                                            'datas_fname': 'brochure.pdf', 'store_fname': 'brochure.pdf'})
             else:
-                attachment_ids[0].unlink()
+                if attachment_ids:
+                    attachment_ids[0].unlink()
 
     #api.multi
     def _get_binary_image(self):
@@ -66,7 +67,8 @@ class Program(models.Model):
                                            'url': name, 'datas': record.image, 
                                            'datas_fname': 'image.jpg', 'store_fname': 'image.jpg'})
             else:
-                attachment_ids[0].unlink()
+                if attachment_ids:
+                    attachment_ids[0].unlink()
 
     
     name = fields.Char(string="Name")
