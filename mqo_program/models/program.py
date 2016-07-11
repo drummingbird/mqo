@@ -1,4 +1,7 @@
 from openerp import fields, models, api
+from tempfile import TemporaryFile
+import base64
+
 
 class Program(models.Model):
     _name = 'mqo.program'
@@ -75,7 +78,10 @@ class Program(models.Model):
     individual = fields.Boolean(string="For individuals?")
     organisational = fields.Boolean(string="For organisations?")
     pagelink = fields.Char(string="Pagelink")
+    
+    brochure_filename = fields.Char(String="Brochure Filename")
     brochure = fields.Binary(compute=_get_binary_brochure, inverse=_set_binary_brochure, string='Brochure', store=False)
+    image_filename = fields.Char(String="Image Filename")
     image = fields.Binary(compute=_get_binary_image, inverse=_set_binary_image, string='Image', store=False)
     benefits = fields.One2many('mqo.benefit_program_link', 'program', string="Benefits")
    
