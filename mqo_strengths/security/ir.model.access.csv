@@ -1,2 +1,6 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_mqo_exercises,mqo.exercises,model_mqo_exercise,,1,0,0,0
+access_mqo_snippet,mqo.snippet.public,model_mqo_snippet_strengths,,1,0,0,0
+access_mqo_snippet,mqo.snippet.public,model_mqo_snippet_strengths,,1,0,0,0
+access_mqo_snippet_manager,mqo.snippet.manager,model_mqo_snippet_strengths,base.group_survey_manager,1,1,1,1
+access_survey_question_category,survey.question.category,model_survey_question_category,,1,0,0,0
+access_survey_question_category_manager,survey.question.category.manager,model_survey_question_category,base.group_survey_manager,1,1,1,1

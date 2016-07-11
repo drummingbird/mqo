@@ -1,2 +1,3 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_mqo_interest,mqo.interest,model_mqo_interest,,0,1,1,0
+access_mqo_interest_manager,mqo.interest.manager,model_mqo_interest,mqo_program.mqo_program_manager,1,1,1,1
+access_mqo_interest,mqo.interest,model_mqo_interest,,1,1,1,0
