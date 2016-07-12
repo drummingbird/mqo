@@ -18,6 +18,8 @@
 	                            	<field name="image" filename="image_filename"/>
 		                            <field name="session_detail"/>
 		                            <field name="timeframe_detail"/>
+		                            <field name="individual"/>
+		                            <field name="organisational"/>
 		                            <field name="pagelink"/>
 		                            <field name="benefits">
 		                            	<tree string="Benefits">

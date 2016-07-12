@@ -141,14 +141,14 @@
 	
     <template id="program_show_interest" inherit_id="mqo_program.list" name="Show programs">
     	<xpath expr="//div[@name='program_list_action_buttons']" position="inside">
-            <div class="row mt16">
+            <div class="row mt8">
                	<div class="btn-group btn-block">
                    	<a class="btn btn-primary btn-block" t-attf-href="/interest/{{slug(program)}}">Register interest</a>
            		</div>
           	</div>
 			<t t-if="program.n_needed">
        			<t t-set="n_needed_more" t-value="program.n_needed - program.n_interested"/>
-                <div class="row mt16">
+                <div class="row mt8">
                     <div class="btn-group btn-block">
 	                    <t t-if="n_needed_more &lt; 1">
 	                         <p class="text-center"><strong>Running soon!</strong></p>
