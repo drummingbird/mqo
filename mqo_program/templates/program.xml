@@ -1,6 +1,6 @@
 <openerp>
   <data>
-	<template id="list" name="List of programs">
+	<template id="list" name="List of programs" page="True">
       <t t-call="website.layout">
         <t t-set="title"><t t-esc="listname or 'Programs'"/> | Mindquip</t>
         <div id="wrap">
