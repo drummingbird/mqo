@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="survey_form">
+            <field name="name">Form view for survey</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_form"/>
+            <field name="arch" type="xml">
+	            <xpath expr="//page[@string='Select Options']" position="inside">
+	                <group colspan="4">
+	                    <field name="invite_only"/>
+	                </group>
+	            </xpath>
+	        </field>
+		</record>
+    </data>
+</openerp>
