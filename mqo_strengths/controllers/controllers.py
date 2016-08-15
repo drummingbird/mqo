@@ -45,7 +45,11 @@ class StrengthsResults(http.Controller):
 # Survey wrapper for strengths survey response
     @http.route(['/mystrengths/<string:token>'],
                 type='http', auth='public', website=True)
-    def survey_wrapper(self, token, prev=None, **post):
+    def survey_wrapper(self, token=None, prev=None, **post):
+        # Only bother if there's a token.
+        if not token:
+            return request.website.render("website.403")
+        
         '''wraps a response'''
         cr, uid, context = request.cr, request.uid, request.context
         survey_obj = request.registry['survey.survey']

@@ -19,29 +19,33 @@ $(document).ready(function () {
     'use strict';
     console.debug("[mqo_strengths] Strengths Result JS is loading...");
 
-	var d3data = JSON.parse($('#d3bar').attr("d3data"));
-
-	nv.addGraph(function() {
-		var chart = nv.models.multiBarHorizontalChart()
-			.x(function(d) { return d.label })
-			.y(function(d) { return d.value })
-			.margin({top: 30, right: 120, bottom: 50, left: 275})
-			.showValues(true)
-			.tooltips(true)
-			.showControls(false)
-			.forceY([0, 5]);
-
-		chart.yAxis
-			.tickFormat(d3.format(',.2f'));
-
-		d3.select('#d3bar svg')
-			.datum(d3data)
-			.transition().duration(500).call(chart);
-
-		nv.utils.windowResize(chart.update);
-
-		return chart;
-	});
+	if (window.location.href.indexOf("mystrengths") > -1){
+		if ($("#d3bar").length > 0){
+			var d3data = JSON.parse($('#d3bar').attr("d3data"));
+		
+			nv.addGraph(function() {
+				var chart = nv.models.multiBarHorizontalChart()
+					.x(function(d) { return d.label })
+					.y(function(d) { return d.value })
+					.margin({top: 30, right: 120, bottom: 50, left: 275})
+					.showValues(true)
+					.tooltips(true)
+					.showControls(false)
+					.forceY([0, 5]);
+		
+				chart.yAxis
+					.tickFormat(d3.format(',.2f'));
+		
+				d3.select('#d3bar svg')
+					.datum(d3data)
+					.transition().duration(500).call(chart);
+		
+				nv.utils.windowResize(chart.update);
+		
+				return chart;
+			});
+		}
+	}
 	
     console.debug("[mqo_strengths] Strengths Result JS loaded!");
 });
