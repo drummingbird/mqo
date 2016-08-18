@@ -96,7 +96,7 @@
 			                                		<p t-if="program.price_pp==0"><span class="glyphicon glyphicon-usd"></span> NZ$<t t-esc="program.price_program"/> plus GST per program (for up to <t t-esc="program.price_max_n"/> people)</p>
 			                                	</t>
 			                                </t>
-			                                <p t-if="program.brochure_filename"><a t-attf-href="/program/{{(program.name.lower().replace(' ', ''))}}/brochure.pdf"><img src="/mqo_program/static/src/img/Adobe_PDF_file_icon_32x32.png"/> View brochure</a></p>
+			                                <p t-if="program.brochure_filename"><a t-attf-href="/program/{{(program.name.lower().replace(' ', ''))}}/brochure.pdf"><img src="/mqo_program/static/img/Adobe_PDF_file_icon_32x32.png"/> View brochure</a></p>
 			                                <div class="mt16 btn-group btn-group-justified" name="program_list_action_buttons">
 			                                	<a t-if="program.pagelink" type="button" class="btn btn-default" style="white-space: normal; word-wrap: break-word;" t-attf-href="{{(program.pagelink)}}">Find out more</a>
 			                                </div>
