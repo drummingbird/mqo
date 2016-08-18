@@ -141,24 +141,18 @@
 	
     <template id="program_show_interest" inherit_id="mqo_program.list" name="Show programs">
     	<xpath expr="//div[@name='program_list_action_buttons']" position="inside">
-            <div class="row mt8">
-               	<div class="btn-group btn-block">
-                   	<a class="btn btn-primary btn-block" t-attf-href="/interest/{{slug(program)}}">Register interest</a>
-           		</div>
-          	</div>
+    		<a type="button" class="btn btn-primary" style="white-space: normal; word-wrap: break-word;" t-attf-href="/interest/{{slug(program)}}">Register interest</a>
+		</xpath>
+		<xpath expr="//div[@name='program_list_info_body']" position="inside">
           	<t t-if="category=='individuals'">
 				<t t-if="program.n_needed">
 	       			<t t-set="n_needed_more" t-value="program.n_needed - program.n_interested"/>
-	                <div class="row mt8">
-	                    <div class="btn-group btn-block">
-		                    <t t-if="n_needed_more &lt; 1">
-		                         <p class="text-center"><strong>Running soon!</strong></p>
-		                    </t>
-		                    <t t-if="n_needed_more &gt; 0">
-		                         <p class="text-center"><strong><t t-esc="'%.0f'%n_needed_more"/> more<br/>needed to run</strong></p>
-		                    </t>
-	                 	</div>
-	               	</div>
+	                    <t t-if="n_needed_more &lt; 1">
+	                         <p class="text-center"><strong>Running soon!</strong></p>
+	                    </t>
+	                    <t t-if="n_needed_more &gt; 0">
+	                         <p class="text-center"><strong><t t-esc="'%.0f'%n_needed_more"/> more registrations needed to run</strong></p>
+	                    </t>
                	</t>
             </t>
         </xpath>

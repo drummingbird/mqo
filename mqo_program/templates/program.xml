@@ -12,7 +12,7 @@
 			          <div class="row">
 			            <div class="col-md-12 mt32 mb32">
 			              <h1 class="text-center">Programs for individuals</h1>
-			              <h3 class="text-muted text-center">These are programs run for individuals.</h3>
+			              <h3 class="text-muted text-center">These are run when enough interest has been registered.</h3>
 			            </div>
 			          </div>
 			        </div>
@@ -24,7 +24,7 @@
 			          <div class="row">
 			            <div class="col-md-12 mt32 mb32">
 			              <h1 class="text-center">Programs for organisations</h1>
-			              <h3 class="text-muted text-center">These are programs run for organisations.</h3>
+			              <h3 class="text-muted text-center">Contact us to run these for your organisation.</h3>
 			            </div>
 			          </div>
 			        </div>
@@ -49,56 +49,50 @@
 							<div class="row mqo-featured mb32">
 								<div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
 						    		<div class="row">
-					                    <div class="col-xs-3 col-sm-4 col-md-4 pull-left">
+					                    <div class="hidden-xs col-sm-4 col-md-4 pull-left">
 					                        <a t-attf-href="/program/{{(program.name.lower().replace(' ', ''))}}/brochure.pdf"><img t-attf-src="/program/{{(program.name.lower().replace(' ', ''))}}/image.jpg" alt="" class="img-rounded img-responsive" /></a>
 					                    </div>
-					                    <div class=" col-xs-9 col-sm-8 col-md-8">
-					                      	<div>
-    			                                <div class="mb16">
-							                        <div name="program_list_action_buttons" class="pull-right" style="padding-left: 24px;">
-								                        <div class="row">
-								                        	<!-- Split button -->
-									                        <div class="btn-group btn-block">
-									                            <a type="button" class="btn btn-primary" t-attf-href="{{(program.pagelink)}}">
-									                                Find out more</a>
-									                            <button class="btn btn-primary dropdown-toggle pull-right" data-toggle="dropdown">
-									                                <span class="caret"></span><span class="sr-only">Other</span>
-									                            </button>
-									                            <ul class="dropdown-menu" role="menu">
-									                                <li><a t-attf-href="/program/{{(program.name.lower().replace(' ', ''))}}/brochure.pdf">Brochure PDF</a></li>
-									                                <!-- <li class="divider"></li>
-									                                <li><a href="#">Testimonials</a></li> -->
-									                            </ul>
-									                    	</div>
-								                    	</div>
-							                    	</div>
-					                                <div>
-					                                	<h3 name="program_name"><t t-esc="program.name"/></h3>
-									                    <p name="program_description"><t t-esc="program.description"/></p>
-								                        <p name="program_session_detail" t-if="program.timeframe_detail"><span class="glyphicon glyphicon-time"></span> <t t-esc="program.session_detail"/></p>
-								                        <p name="program_timeframe_detail" t-if="program.timeframe_detail"><span class="glyphicon glyphicon-calendar"></span> <t t-esc="program.timeframe_detail"/></p>
-								                        <t name="program_benefits" t-if="program.benefits">
-									                        <p><span class="glyphicon glyphicon-check"></span> Key benefit areas:</p>
-										                        <p>
-										                        <t t-foreach="program.benefits" t-as="link">
-										                        	<t t-if="link_index &lt; 3">
-										                        		<span class="label label-success"><t t-esc="link.benefit.name"/></span>
-										                        	</t>
-								                                </t>
-								                                </p>
-							                                <t t-if="program.benefits[3]">
-								                                <p><span class="glyphicon glyphicon-check"></span> Other benefit areas:</p>
-										                        <p>
-										                        <t t-foreach="program.benefits" t-as="link">
-										                        	<t t-if="link_index &gt; 2">
-										                        		<span class="label label-info"><t t-esc="link.benefit.name"/></span>
-										                        	</t>
-								                                </t>
-								                                </p>
-								                            </t>
-						                                </t>
-					                                </div>
-							                    </div>
+					                    <div name="program_list_info_body" class="col-xs-12 col-sm-8 col-md-8">
+		                                	<h3 name="program_name"><t t-esc="program.name"/></h3>
+						                    <p name="program_description"><span class="glyphicon glyphicon-info-sign"></span> <t t-esc="program.description"/></p>
+					                        <p name="program_session_detail" t-if="program.timeframe_detail"><span class="glyphicon glyphicon-time"></span> <t t-esc="program.session_detail"/></p>
+					                        <p name="program_timeframe_detail" t-if="program.timeframe_detail"><span class="glyphicon glyphicon-calendar"></span> <t t-esc="program.timeframe_detail"/></p>
+					                        <t name="program_benefits" t-if="program.benefits">
+						                        <p><span class="glyphicon glyphicon-check"></span> Key benefit areas:</p>
+							                        <p>
+							                        <t t-foreach="program.benefits" t-as="link">
+							                        	<t t-if="link_index &lt; 3">
+							                        		<span class="label label-success"><t t-esc="link.benefit.name"/></span>
+							                        	</t>
+					                                </t>
+					                                </p>
+				                                <t t-if="program.benefits[3]">
+					                                <p><span class="glyphicon glyphicon-check"></span> Other benefit areas:</p>
+							                        <p>
+							                        <t t-foreach="program.benefits" t-as="link">
+							                        	<t t-if="link_index &gt; 2">
+							                        		<span class="label label-info"><t t-esc="link.benefit.name"/></span>
+							                        	</t>
+					                                </t>
+					                                </p>
+					                            </t>
+			                                </t>
+			                                <t t-if="category=='individuals'">
+			                                	<t t-if="program.price_pp">
+			                                		<p><span class="glyphicon glyphicon-usd"></span> NZ$<t t-esc="program.price_pp"/> incl. GST per person (minimum numbers apply)</p>
+			                                	</t>
+			                                </t>
+			                                <t t-if="category!='individuals'">
+			                                	<t t-if="program.price_pp">
+			                                		<p><span class="glyphicon glyphicon-usd"></span> NZ$<t t-esc="program.price_pp"/> incl. GST per person (minimum numbers apply)</p>
+			                                	</t>
+			                                	<t t-if="program.price_program">
+			                                		<p>or NZ$<t t-esc="program.price_program"/> plus GST per program (for up to <t t-esc="program.price_max_n"/> people)</p>
+			                                	</t>
+			                                </t>
+			                                <p><a t-attf-href="/program/{{(program.name.lower().replace(' ', ''))}}/brochure.pdf"><img src="/mqo_program/static/src/img/Adobe_PDF_file_icon_32x32.png"/> View brochure</a></p>
+			                                <div class="mt16 btn-group btn-group-justified" name="program_list_action_buttons">
+			                                	<a type="button" class="btn btn-default" style="white-space: normal; word-wrap: break-word;" t-attf-href="{{(program.pagelink)}}">Find out more</a>
 			                                </div>
 					                    </div>
 									</div>

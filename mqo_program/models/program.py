@@ -80,6 +80,9 @@ class Program(models.Model):
     individual = fields.Boolean(string="For individuals?")
     organisational = fields.Boolean(string="For organisations?")
     pagelink = fields.Char(string="Pagelink")
+    price_pp = fields.Integer(string="Price per person")
+    price_program = fields.Integer(string="Price per program")
+    price_max_n = fields.Integer(string="Max people for pricing", default=30)
     
     brochure_filename = fields.Char(String="Brochure Filename")
     brochure = fields.Binary(compute=_get_binary_brochure, inverse=_set_binary_brochure, string='Brochure', store=False)

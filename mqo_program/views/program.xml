@@ -20,6 +20,9 @@
 		                            <field name="timeframe_detail"/>
 		                            <field name="individual"/>
 		                            <field name="organisational"/>
+		                            <field name="price_pp"/>
+		                            <field name="price_program"/>
+		                            <field name="price_max_n"/>
 		                            <field name="pagelink"/>
 		                            <field name="benefits">
 		                            	<tree string="Benefits">
