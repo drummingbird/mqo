@@ -10,7 +10,7 @@
 			      <section>
 			        <div class="container">
 			          <div class="row">
-			            <div class="col-md-12 mt32 mb32">
+			            <div class="col-md-12 mt16 mb16">
 			              <h1 class="text-center">Programs for individuals</h1>
 			              <h3 class="text-muted text-center">These are run when enough interest has been registered.</h3>
 			            </div>
@@ -22,9 +22,9 @@
 			      <section>
 			        <div class="container">
 			          <div class="row">
-			            <div class="col-md-12 mt32 mb32">
+			            <div class="col-md-12 mt16 mb16">
 			              <h1 class="text-center">Programs for organisations</h1>
-			              <h3 class="text-muted text-center">Contact us to run these for your organisation.</h3>
+			              <h3 class="text-muted text-center">Register your interest to run a program for your organisation.</h3>
 			            </div>
 			          </div>
 			        </div>
@@ -34,14 +34,33 @@
 			      <section>
 			        <div class="container">
 			          <div class="row">
-			            <div class="col-md-12 mt32 mb32">
+			            <div class="col-md-12 mt16 mb16">
 			              <h1 class="text-center">All Mindquip programs</h1>
-			              <h3 class="text-muted text-center">Some programs suit individuals, and others suit organisations.</h3>
+			              <h3 class="text-muted text-center">Register your interest in a program for yourself or your organisation.</h3>
 			            </div>
 			          </div>
 			        </div>
 			      </section>
 		      </t>
+		      <section>
+		        <div class="container">
+		          <div class="row">
+		            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+			            <p class='text-center'>
+			          		<span class='text-center'>Filter programs for:</span>
+			          	</p>
+		              <div class="btn-group btn-group-justified" name="program_filter">
+			          	<a t-if="category=='all'" type="button" class="btn btn-primary mqo-btn-wrap" t-attf-href="/programs/all">All</a>
+			          	<a t-if="category!='all'" type="button" class="btn btn-default mqo-btn-wrap" t-attf-href="/programs/all">All</a>
+						<a t-if="category=='individuals'" type="button" class="btn btn-primary mqo-btn-wrap" t-attf-href="/programs/individuals">Indi<wbr/>vid<wbr/>uals</a>
+			          	<a t-if="category!='individuals'" type="button" class="btn btn-default mqo-btn-wrap" t-attf-href="/programs/individuals">Indi<wbr/>vid<wbr/>uals</a>
+			          	<a t-if="category=='organisations'" type="button" class="btn btn-primary mqo-btn-wrap" t-attf-href="/programs/organisations">Org<wbr/>an<wbr/>isa<wbr/>tions</a>
+			          	<a t-if="category!='organisations'" type="button" class="btn btn-default mqo-btn-wrap" t-attf-href="/programs/organisations">Org<wbr/>an<wbr/>isa<wbr/>tions</a>
+                      </div>
+		            </div>
+		          </div>
+		        </div>
+		      </section>
 		      <t t-if="programs">
 			      <section>
 			        <div class="container">
@@ -59,26 +78,43 @@
 						                    <p name="program_description"><span class="glyphicon glyphicon-info-sign"></span> <t t-esc="program.description"/></p>
 					                        <p name="program_session_detail" t-if="program.session_detail"><span class="glyphicon glyphicon-time"></span> <t t-esc="program.session_detail"/></p>
 					                        <p name="program_timeframe_detail" t-if="program.timeframe_detail"><span class="glyphicon glyphicon-calendar"></span> <t t-esc="program.timeframe_detail"/></p>
-					                        <t name="program_benefits" t-if="program.benefits">
-						                        <p><span class="glyphicon glyphicon-check"></span> Key benefit areas:</p>
-							                        <p>
-							                        <t t-foreach="program.benefits" t-as="link">
-							                        	<t t-if="link_index &lt; 3">
-							                        		<span class="label label-success"><t t-esc="link.benefit.name"/></span>
-							                        	</t>
-					                                </t>
-					                                </p>
-				                                <t t-if="program.benefits[3]">
-					                                <p><span class="glyphicon glyphicon-check"></span> Other benefit areas:</p>
-							                        <p>
-							                        <t t-foreach="program.benefits" t-as="link">
-							                        	<t t-if="link_index &gt; 2">
-							                        		<span class="label label-info"><t t-esc="link.benefit.name"/></span>
-							                        	</t>
-					                                </t>
-					                                </p>
-					                            </t>
-			                                </t>
+					                        <p name="program_benefits" t-if="program.benefits" style="line-height: 180%;">
+					                        	<t t-set="benefitnumber" t-value="0"/>
+					                        	<t t-foreach="program.benefits" t-as="link">
+					                        		<t t-set="benefitmatch" t-value="False"/>
+					                        		<t t-if="link.benefit.category=='individual'">
+					                        			<t t-if="category=='individuals'">
+					                        				<t t-set="benefitmatch" t-value="True"/>
+					                        			</t>
+					                        		</t>
+					                        		<t t-if="link.benefit.category!='individual'">
+					                        			<t t-if="category!='individuals'">
+					                        				<t t-set="benefitmatch" t-value="True"/>
+					                        			</t>
+					                        		</t>
+					                        		<t t-if="category=='all'">
+					                        			<t t-set="benefitmatch" t-value="True"/>
+					                        		</t>
+					                        		<t t-if="benefitmatch">
+					                        			<t t-if="benefitnumber &lt; 10">
+						                        			<t t-set="benefitnumberold" t-value="benefitnumber"/>
+						                        			<t t-set="benefitnumber" t-value="benefitnumberold+1"/>
+						                        			<t t-if="benefitnumber==1" >
+																<span class="glyphicon glyphicon-check"></span> Key benefit areas:<br/>
+															</t>
+										                    <t t-if="benefitnumber &lt; 4">
+										                    	<span class="label label-primary"><t t-esc="link.benefit.name"/></span>
+										                    </t>
+										                    <t t-if="benefitnumber==4" >
+																<br/><span class="glyphicon glyphicon-plus-sign"></span> Extra benefit areas:<br/>
+															</t>
+										                    <t t-if="benefitnumber &gt; 3">
+										                    	<span class="label label-success"><t t-esc="link.benefit.name"/></span>
+										                    </t>
+									                    </t>
+					                        		</t>
+						                        </t>
+			                                </p>
 			                                <t t-if="category=='individuals'">
 			                                	<t t-if="program.price_pp">
 			                                		<p><span class="glyphicon glyphicon-usd"></span> NZ$<t t-esc="program.price_pp"/> incl. GST per person (minimum numbers apply)</p>
