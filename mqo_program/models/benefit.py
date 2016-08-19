@@ -18,3 +18,4 @@ class BenefitProgramLink(models.Model):
     benefit = fields.Many2one('mqo.benefit', string="Benefit")
     sequence = fields.Integer(string="Sequence")
     
+    _order = "program, sequence"
