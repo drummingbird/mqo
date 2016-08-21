@@ -6,48 +6,22 @@
         <div id="wrap">
 	        <div class="oe_structure"/>
 	        <div>
-	          <t t-if="category=='individuals'">
-			      <section>
-			        <div class="container">
-			          <div class="row">
-			            <div class="col-md-12 mt16 mb16">
-			              <h1 class="text-center">Programs for individuals</h1>
-			              <h3 class="text-muted text-center">These are run when enough interest has been registered.</h3>
-			            </div>
-			          </div>
-			        </div>
-			      </section>
-		      </t>
-	          <t t-if="category=='organisations'">
-			      <section>
-			        <div class="container">
-			          <div class="row">
-			            <div class="col-md-12 mt16 mb16">
-			              <h1 class="text-center">Programs for organisations</h1>
-			              <h3 class="text-muted text-center">Register your interest to run a program for your organisation.</h3>
-			            </div>
-			          </div>
-			        </div>
-			      </section>
-		      </t>
-	          <t t-if="category=='all'">
-			      <section>
-			        <div class="container">
-			          <div class="row">
-			            <div class="col-md-12 mt16 mb16">
-			              <h1 class="text-center">All Mindquip programs</h1>
-			              <h3 class="text-muted text-center">Register your interest in a program for yourself or your organisation.</h3>
-			            </div>
-			          </div>
-			        </div>
-			      </section>
-		      </t>
+		      <section>
+		        <div class="container">
+		          <div class="row">
+		            <div class="col-md-12 mt16 mb16">
+		              <h1 class="text-center">Training programs</h1>
+		              <h3 class="text-muted text-center">Register your interest in a program for yourself or your organisation</h3>
+		            </div>
+		          </div>
+		        </div>
+		      </section>
 		      <section>
 		        <div class="container">
 		          <div class="row">
 		            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
 			            <p class='text-center'>
-			          		<span class='text-center'>Filter programs for:</span>
+			          		<span class='text-center'>Show me programs for:</span>
 			          	</p>
 		              <div class="btn-group btn-group-justified" name="program_filter">
 			          	<a t-if="category=='all'" type="button" class="btn btn-primary mqo-btn-wrap" t-attf-href="/programs/all">All</a>
@@ -75,6 +49,7 @@
 					                    </div>
 					                    <div name="program_list_info_body" class="col-xs-12 col-sm-8 col-md-8">
 		                                	<h3 name="program_name"><t t-esc="program.name"/></h3>
+		                                	<h4 name="program_subtitle"><t t-esc="program.subtitle"/></h4>
 						                    <p name="program_description"><span class="glyphicon glyphicon-info-sign"></span> <t t-esc="program.description"/></p>
 					                        <p name="program_session_detail" t-if="program.session_detail"><span class="glyphicon glyphicon-time"></span> <t t-esc="program.session_detail"/></p>
 					                        <p name="program_timeframe_detail" t-if="program.timeframe_detail"><span class="glyphicon glyphicon-calendar"></span> <t t-esc="program.timeframe_detail"/></p>

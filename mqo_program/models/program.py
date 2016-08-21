@@ -72,6 +72,7 @@ class Program(models.Model):
 
     
     name = fields.Char(string="Name")
+    subtitle = fields.Char(string="Subtitle")
     description = fields.Text(string="Description")
     
     session_detail = fields.Char(string="Session details")

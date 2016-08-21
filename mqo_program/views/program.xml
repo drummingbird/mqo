@@ -11,6 +11,7 @@
                     		<page name='about' string="About the course">
 		                        <group>
 		                            <field name="name"/>
+		                            <field name="subtitle"/>
 		                            <field name="description"/>
 									<field name="brochure_filename" invisible='1'/>
 									<field name="brochure" filename="brochure_filename"/>
