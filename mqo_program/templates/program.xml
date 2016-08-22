@@ -43,8 +43,8 @@
 								<div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
 						    		<div class="row">
 					                    <div class="hidden-xs col-sm-4 col-md-4 pull-left">
-					                    	<t t-if="program.brochure_filename">
-    											<a t-if="program.image_filename" t-attf-href="/program/{{(program.name.lower().replace(' ', ''))}}/brochure.pdf"><img t-attf-src="/program/{{(program.name.lower().replace(' ', ''))}}/image.jpg" alt="" class="img-rounded img-responsive" /></a>
+					                    	<t t-if="program.image_filename">
+    											<a t-attf-href="{{(program.pagelink)}}"><img t-attf-src="/program/{{(program.name.lower().replace(' ', ''))}}/image.jpg" alt="" class="img-rounded img-responsive" /></a>
     										</t>
 					                    </div>
 					                    <div name="program_list_info_body" class="col-xs-12 col-sm-8 col-md-8">
