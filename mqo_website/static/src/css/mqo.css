@@ -55,31 +55,41 @@
 .mqo-btn {
 	white-space: normal;
 	word-wrap: break-word;
-	border: 1px solid #ccc;
+	border: 0px solid #ccc;
 	border-radius: 16px;
 	box-shadow: 
-		inset 0 0 0 6px rgba(255,255,255,1.0),
-		0 0 0 1px rgba(255,255,255,1.0);
+		0px -1px 3px rgba(255,255,255,0.5), /*top external highlight*/
+		2px 2px 6px rgba(0,0,0,0.5), /*bottom external shadow*/
+		inset 0px 2px 4px rgba(255,255,255,0.5), /*top internal highlight*/
+		inset 0px -2px 4px rgba(0,0,0,0.4); /*bottom internal shadow*/
 	transition: all 0.3s ease-in-out;
 }
 
 .mqo-btn:hover {
 	box-shadow: 
-		inset 0 0 0 0px rgba(255,255,255,1.0),
-		0 0 0 1px rgba(255,255,255,1.0);
+		0px -1px 3px rgba(255,255,255,0.5), /*top external highlight*/
+		2px 2px 6px rgba(255,255,255,0.5), /*bottom external highlight*/
+		inset 2px 3px 4px rgba(0,0,0,0.2), /*top internal shadow*/
+		inset 0px -2px 4px rgba(255,255,255,0.5); /*bottom internal highlight*/
 }
 
 .mqo-junction-box {
-	border: 1px solid #ccc;
+	border: 0px solid #ccc;
 	border-radius: 16px;
-	box-shadow: 
-		inset 0 0 0 0px rgba(204,204,204,1.0);
+	box-shadow:
+		0px -1px 3px rgba(255,255,255,0.5), /*top external highlight*/
+		2px 2px 6px rgba(0,0,0,0.5), /*bottom external shadow*/
+		inset 0px 2px 4px rgba(255,255,255,0.5), /*top internal highlight*/
+		inset 0px -2px 4px rgba(0,0,0,0.4); /*bottom internal shadow*/
 	transition: all 0.3s ease-in-out;
 }
 
 .mqo-junction-box:hover {
 	background-color: #f5fcf2;
-	box-shadow: 
-		inset 0 0 0 6px rgba(204,204,204,1.0);
+	box-shadow:
+		0px -1px 3px rgba(255,255,255,0.5), /*top external highlight*/ 
+		2px 2px 6px rgba(255,255,255,0.5), /*bottom external highlight*/
+		inset 2px 3px 4px rgba(0,0,0,0.2), /*top internal shadow*/
+		inset 0px -2px 4px rgba(255,255,255,0.5); /*bottom internal highlight*/
 }
 
