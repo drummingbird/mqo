@@ -1,0 +1,65 @@
+<openerp>
+  <data>
+	<template id="solutions" name="List of solutions" page="True">
+      <t t-call="website.layout">
+        <t t-set="title"><t t-esc="listname or 'Solutions'"/> | Mindquip</t>
+        <div id="wrap">
+	        <div class="oe_structure"/>
+	        <div>
+		      <section>
+		        <div class="container">
+		          <div class="row">
+		            <div class="col-md-12 mt16 mb16">
+		              <h1 class="text-center">Find a solution</h1>
+		              <h3 class="text-muted text-center">Click a goal to see the programs that can help you achieve it.</h3>
+		            </div>
+		          </div>
+		        </div>
+		      </section>
+		      <section>
+		        <div class="container">
+		          <div class="row">
+		            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+			            <p class='text-center'>
+			          		<span class='text-center'>Show me solutions for:</span>
+			          	</p>
+		              <div class="btn-group btn-group-justified" name="solution_filter">
+			          	<a t-if="category=='all'" type="button" class="btn btn-primary mqo-btn-wrap" t-attf-href="/solutions/all">All</a>
+			          	<a t-if="category!='all'" type="button" class="btn btn-default mqo-btn-wrap" t-attf-href="/solutions/all">All</a>
+						<a t-if="category=='individuals'" type="button" class="btn btn-primary mqo-btn-wrap" t-attf-href="/solutions/individuals">Indi<wbr/>vid<wbr/>uals</a>
+			          	<a t-if="category!='individuals'" type="button" class="btn btn-default mqo-btn-wrap" t-attf-href="/solutions/individuals">Indi<wbr/>vid<wbr/>uals</a>
+			          	<a t-if="category=='organisations'" type="button" class="btn btn-primary mqo-btn-wrap" t-attf-href="/solutions/organisations">Org<wbr/>an<wbr/>isa<wbr/>tions</a>
+			          	<a t-if="category!='organisations'" type="button" class="btn btn-default mqo-btn-wrap" t-attf-href="/solutions/organisations">Org<wbr/>an<wbr/>isa<wbr/>tions</a>
+                      </div>
+		            </div>
+		          </div>
+		        </div>
+		      </section>
+		      <t t-if="benefits">
+			      <section>
+			        <div class="container">
+			        	<div class="row">
+			        		<div class="col-md-4 col-md-offset-4 mt16 mb16">
+					        	<ul class="nav nav-pills nav-stacked">
+						        <t t-foreach="benefits" t-as="benefit">
+									 <li>
+				                        <a t-attf-href="/programs/{{category}}/{{(slug(benefit))}}"><t t-esc="benefit.name"/>
+				                            <span class="badge pull-right"><t t-esc="len(benefit.program_links)"/></span>
+				                        </a>
+				                    </li>
+								</t>
+								</ul>
+							</div>
+						</div>
+			        </div>
+			      </section>
+		      </t>
+	        </div>
+	        <div class="oe_structure"/>
+        </div>
+	  </t>    
+	</template>
+	
+	
+  </data>
+</openerp>

@@ -31,6 +31,20 @@
 			          	<a t-if="category=='organisations'" type="button" class="btn btn-primary mqo-btn-wrap" t-attf-href="/programs/organisations">Org<wbr/>an<wbr/>isa<wbr/>tions</a>
 			          	<a t-if="category!='organisations'" type="button" class="btn btn-default mqo-btn-wrap" t-attf-href="/programs/organisations">Org<wbr/>an<wbr/>isa<wbr/>tions</a>
                       </div>
+                      <div class="mt16">
+                      	<p class='text-center' t-if="benefit==None">
+			          		<span class='text-center'>You can <a t-attf-href="/solutions/{{(category)}}">filter these by the solution you want</a></span>
+			          	</p>
+			            <p class='text-center' t-if="benefit">
+			          		<span class='text-center'>Currently filtering by solution for:</span>
+			          	</p>
+			          	<p class='text-center' t-if="benefit">
+			          		<span class="text-center badge"><t t-esc="benefit.name"/></span>
+			          	</p>
+			          	<p class='text-center' t-if="benefit">
+			          		<span class='text-center'><a t-attf-href="/programs/{{(category)}}">Remove this filter</a> or <a t-attf-href="/solutions/{{(category)}}">Choose a different solution</a></span>
+			          	</p>
+			          </div>
 		            </div>
 		          </div>
 		        </div>

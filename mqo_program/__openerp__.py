@@ -27,6 +27,7 @@
         'views/program.xml',
         'views/benefit.xml',
         'templates/program.xml',
+        'templates/solutions.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
