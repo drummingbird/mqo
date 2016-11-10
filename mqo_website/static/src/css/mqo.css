@@ -93,3 +93,303 @@
 		inset 0px -2px 4px rgba(255,255,255,0.5); /*bottom internal highlight*/
 }
 
+p,
+.p {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.lead {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 6px 12px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.33;
+}
+
+.btn-lg {
+    font-size: 18px;
+    padding: 10px 16px;
+}
+
+h1,
+.h1 {
+  font-size: 28px;
+}
+
+h2,
+.h2 {
+  font-size: 23px;
+}
+
+h3,
+.h3 {
+  font-size: 19px;
+}
+
+h4,
+.h4 {
+  font-size: 17px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  p,
+  .p {
+      font-size: 16px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+  
+  .btn {
+  	 font-size: 16px;
+     padding: 7px 14px;
+  }
+  
+  .btn-lg {
+	 font-size: 20px;
+	 padding: 12px 20px;
+  }  
+  
+  h1,
+  .h1 {
+    font-size: 32px;
+  }
+  
+  h2,
+  .h2 {
+    font-size: 26px;
+  }
+  
+  h3,
+  .h3 {
+    font-size: 22px;
+  }
+  
+  h4,
+  .h4 {
+    font-size: 17px;
+  }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  p,
+  .p {
+      font-size: 18px;
+      line-height: 1.4;
+  }
+
+  .lead {
+    font-size: 20px;
+  }
+  
+  .btn {
+  	 font-size: 18px;
+  	 padding: 8px 20px;
+  }
+
+  .btn-lg {
+	 font-size: 22px;
+	 padding: 14px 40px;
+  }  
+  
+  h1,
+  .h1 {
+    font-size: 36px;
+  }
+  
+  h2,
+  .h2 {
+    font-size: 30px;
+  }
+  
+  h3,
+  .h3 {
+    font-size: 24px;
+  }
+  
+  h4,
+  .h4 {
+    font-size: 18px;
+  }
+}
+
+
+.btn-outlined {
+	text-decoration: none;
+    font-weight:500;
+	border: 2px solid;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+            transition: all 0.3s;
+}
+
+
+.btn-outlined.mqo-green {
+    background: none;
+    color: #74914B;
+	border-color: #74914B;
+}
+
+.btn-outlined.mqo-green:hover,
+.btn-outlined.mqo-green:active {
+    color: #FFF;
+    background: #74914B;
+    border-color: #74914B;
+}
+
+
+.btn-outlined.mqo-red {
+    background: none;
+    color: #CA3C20;
+	border-color: #CA3C20;
+}
+
+.btn-outlined.mqo-red:hover,
+.btn-outlined.mqo-red:active {
+    color: #FFF;
+    background: #CA3C20;
+    border-color: #CA3C20;
+}
+
+.btn-outlined.mqo-blue {
+    background: none;
+    color: #5499B2;
+	border-color: #5499B2;
+}
+
+.btn-outlined.mqo-blue:hover,
+.btn-outlined.mqo-blue:active {
+    color: #FFF;
+    background: #5499B2;
+    border-color: #5499B2;
+}
+
+
+.btn-outlined.mqo-green-solid {
+    color: #FFF;
+    background: #74914B;
+    border-color: #74914B;
+}
+
+.btn-outlined.mqo-green-solid:hover,
+.btn-outlined.mqo-green-solid:active {
+    background: none;
+    color: #74914B;
+}
+
+
+.btn-outlined.mqo-red-solid {
+    color: #FFF;
+    background: #CA3C20;
+    border-color: #CA3C20;
+}
+
+.btn-outlined.mqo-red-solid:hover,
+.btn-outlined.mqo-red-solid:active {
+    background: none;
+    color: #CA3C20;
+}
+
+.btn-outlined.mqo-blue-solid {
+    color: #FFF;
+    background: #5499B2;
+    border-color: #5499B2;
+}
+
+.btn-outlined.mqo-blue-solid:hover,
+.btn-outlined.mqo-blue-solid:active {
+    background: none;
+    color: #5499B2;
+}
+
+
+.btn-outlined.btn-black {
+    background: none;
+    color: #000000;
+	border-color: #000000;
+}
+
+.btn-outlined.btn-black:hover,
+.btn-outlined.btn-black:active {
+    color: #FFF;
+    background: #000000;
+    border-color: #000000;
+}
+
+.btn-outlined.btn-white {
+    background: none;
+    color: #FFFFFF;
+	border-color: #FFFFFF;
+}
+
+.btn-outlined.btn-white:hover,
+.btn-outlined.btn-white:active {
+    color: #42788C;
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+
+.btn-outlined.btn-lg{
+	border-width: 3px;
+}
+
+.mqo-bg-green {
+	color: #FFF;
+	background-color: #88AB58;
+}
+
+.mqo-bg-blue {
+	color: #FFF;
+	background-color: #60AFCC;
+}
+
+.mqo-bg-red {
+	color: #FFF;
+	background-color: #E44424;
+}
+
+.padded-col {
+	padding: 0px 4px;
+}
+
+.mqo-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.mqo-greybox {
+  background-color: rgba(70, 70, 70, 0.4);
+}
+
+.mqo-greybox-centre {
+  padding: 5px;
+}
+
+.mqo-titlebox {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.mqo-greybar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mqo-p16 {
+  padding: 16px !important;
+}
