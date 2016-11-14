@@ -41,185 +41,199 @@
 	padding-bottom:32px;
 }
 
-.mqo-btn-lrg {
-	padding: 24px 50px;
-}
 
-
-.mqo-btn-wrap {
-	white-space: normal;
-	word-wrap: break-word;
-}
-
-
-.mqo-btn {
-	white-space: normal;
-	word-wrap: break-word;
-	border: 0px solid #ccc;
-	border-radius: 16px;
-	box-shadow: 
-		0px -1px 3px rgba(255,255,255,0.5), /*top external highlight*/
-		2px 2px 6px rgba(0,0,0,0.5), /*bottom external shadow*/
-		inset 0px 2px 4px rgba(255,255,255,0.5), /*top internal highlight*/
-		inset 0px -2px 4px rgba(0,0,0,0.4); /*bottom internal shadow*/
-	transition: all 0.3s ease-in-out;
-}
-
-.mqo-btn:hover {
-	box-shadow: 
-		0px -1px 3px rgba(255,255,255,0.5), /*top external highlight*/
-		2px 2px 6px rgba(255,255,255,0.5), /*bottom external highlight*/
-		inset 2px 3px 4px rgba(0,0,0,0.2), /*top internal shadow*/
-		inset 0px -2px 4px rgba(255,255,255,0.5); /*bottom internal highlight*/
-}
-
-.mqo-junction-box {
-	border: 0px solid #ccc;
-	border-radius: 16px;
-	box-shadow:
-		0px -1px 3px rgba(255,255,255,0.5), /*top external highlight*/
-		2px 2px 6px rgba(0,0,0,0.5), /*bottom external shadow*/
-		inset 0px 2px 4px rgba(255,255,255,0.5), /*top internal highlight*/
-		inset 0px -2px 4px rgba(0,0,0,0.4); /*bottom internal shadow*/
-	transition: all 0.3s ease-in-out;
-}
-
-.mqo-junction-box:hover {
-	background-color: #f5fcf2;
-	box-shadow:
-		0px -1px 3px rgba(255,255,255,0.5), /*top external highlight*/ 
-		2px 2px 6px rgba(255,255,255,0.5), /*bottom external highlight*/
-		inset 2px 3px 4px rgba(0,0,0,0.2), /*top internal shadow*/
-		inset 0px -2px 4px rgba(255,255,255,0.5); /*bottom internal highlight*/
-}
-
-p,
-.p {
-  font-size: 14px;
+main p,
+main .p {
+  font-size: 12px;
   line-height: 1.3;
 }
 
-.lead {
-  font-size: 16px;
+main li {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+
+main .lead {
+  font-size: 14px;
   line-height: 1.4;
 }
 
-.btn {
-  font-size: 14px;
-  padding: 6px 12px;
+main .btn {
+  font-size: 12px;
+  padding: 4px 10px;
   white-space: normal;
   word-wrap: break-word;
   line-height: 1.33;
 }
 
-.btn-lg {
-    font-size: 18px;
-    padding: 10px 16px;
+main .btn-lg {
+    font-size: 16px;
+    padding: 8px 14px;
 }
 
-h1,
-.h1 {
-  font-size: 28px;
-}
-
-h2,
-.h2 {
+main h1,
+main .h1 {
   font-size: 23px;
 }
 
-h3,
-.h3 {
+main h2,
+main .h2 {
   font-size: 19px;
 }
 
-h4,
-.h4 {
-  font-size: 17px;
+main h3,
+main .h3 {
+  font-size: 16px;
+}
+
+main h4,
+main .h4 {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 480px) {
+	main p,
+	main .p {
+	  font-size: 14px;
+	  line-height: 1.3;
+	}
+
+	main li {
+	  font-size: 14px;
+	  line-height: 1.3;
+	}
+	
+	main .lead {
+	  font-size: 16px;
+	  line-height: 1.4;
+	}
+	
+	main .btn {
+	  font-size: 14px;
+	  padding: 6px 12px;
+	  white-space: normal;
+	  word-wrap: break-word;
+	  line-height: 1.33;
+	}
+	
+	main .btn-lg {
+	    font-size: 18px;
+	    padding: 10px 16px;
+	}
+	
+	main h1,
+	main .h1 {
+	  font-size: 28px;
+	}
+	
+	main h2,
+	main .h2 {
+	  font-size: 23px;
+	}
+	
+	main h3,
+	main .h3 {
+	  font-size: 19px;
+	}
+	
+	main h4,
+	main .h4 {
+	  font-size: 17px;
+	}
 }
 
 
-
-@media screen and (min-width: 768px) {
-  p,
-  .p {
+@media screen and (min-width: 992px) {
+  main p,
+  main .p {
       font-size: 16px;
   }
 
-  .lead {
+	main li {
+	  font-size: 16px;
+	}
+
+  main .lead {
     font-size: 18px;
   }
   
-  .btn {
+  main .btn {
   	 font-size: 16px;
      padding: 7px 14px;
   }
   
-  .btn-lg {
+  main .btn-lg {
 	 font-size: 20px;
 	 padding: 12px 20px;
   }  
   
-  h1,
-  .h1 {
+  main h1,
+  main .h1 {
     font-size: 32px;
   }
   
-  h2,
-  .h2 {
+  main h2,
+  main .h2 {
     font-size: 26px;
   }
   
-  h3,
-  .h3 {
+  main h3,
+  main .h3 {
     font-size: 22px;
   }
   
-  h4,
-  .h4 {
+  main h4,
+  main .h4 {
     font-size: 17px;
   }
 }
 
 
 
-@media screen and (min-width: 1200px) {
-  p,
-  .p {
+@media screen and (min-width: 1400px) {
+  main p,
+  main .p {
       font-size: 18px;
       line-height: 1.4;
   }
 
-  .lead {
+	main li {
+	  font-size: 18px;
+	  line-height: 1.4;
+	}
+
+  main .lead {
     font-size: 20px;
   }
   
-  .btn {
+  main .btn {
   	 font-size: 18px;
   	 padding: 8px 20px;
   }
 
-  .btn-lg {
+  main .btn-lg {
 	 font-size: 22px;
 	 padding: 14px 40px;
   }  
   
-  h1,
-  .h1 {
+  main h1,
+  main .h1 {
     font-size: 36px;
   }
   
-  h2,
-  .h2 {
+  main h2,
+  main .h2 {
     font-size: 30px;
   }
   
-  h3,
-  .h3 {
+  main h3,
+  main .h3 {
     font-size: 24px;
   }
   
-  h4,
-  .h4 {
+  main h4,
+  main .h4 {
     font-size: 18px;
   }
 }
@@ -361,9 +375,6 @@ h4,
 	background-color: #E44424;
 }
 
-.padded-col {
-	padding: 0px 4px;
-}
 
 .mqo-banner {
   background-repeat: no-repeat;
@@ -373,16 +384,11 @@ h4,
 
 .mqo-greybox {
   background-color: rgba(70, 70, 70, 0.4);
-}
-
-.mqo-greybox-centre {
   padding: 5px;
 }
 
 .mqo-titlebox {
-  padding-top: 16px;
-  padding-bottom: 8px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .mqo-greybar {
@@ -390,6 +396,77 @@ h4,
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.mqo-p16 {
-  padding: 16px !important;
+.mqo-banner2-container {
+	position: relative;
+	width: 100%;
+	min-height: 450px;
+}
+
+.mqo-banner2-inner {
+	padding: 0px 0px 0px 0px;
+	background-color: rgba(70, 70, 70, 0.4);
+	height: 450px;
+	position: absolute;
+	overflow: hidden;
+}
+
+.mqo-banner2-img {
+	width: 100%;
+	height: 100%;
+	background-color: #346a19;
+	background-position: center 45%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden; 
+}
+
+.mqo-banner2-titlebox {
+	position: absolute;
+	bottom: 16px;
+	padding: 0;
+}
+
+.text-lightgrey {
+  color: rgb(210, 210, 210);
+}
+
+@media (min-width: 992px) {
+	.row-height {
+	  display: table;
+	  table-layout: fixed;
+	  height: 100%;
+	  width: 100%;
+	}
+	.col-height {
+	  display: table-cell;
+	  float: none;
+	  height: 100%;
+	}
+	.col-top {
+	  vertical-align: top;
+	}
+	.col-middle {
+	  vertical-align: middle;
+	}
+	.col-bottom {
+	  vertical-align: bottom;
+	}
+}
+
+.col-panel {
+	padding: 4px;
+}
+
+.col-inner {
+  position: relative;
+  height: 100%;
+}
+
+.col-inner-body {
+	padding: 16px 16px 80px 16px;
+}
+.col-btn {
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
 }
