@@ -42,6 +42,15 @@
 }
 
 /* default for xs screens*/ 
+main .container {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+main .smaller-size {
+  font-size: 90%;
+}
+
 main p,
 main .p {
   font-size: 14px;
@@ -92,6 +101,11 @@ main .h4 {
 }
 
 @media screen and (min-width: 480px) {
+	main .container {
+	  font-size: 15px;
+	  line-height: 1.3;
+	}
+
 	main p,
 	main .p {
 	  font-size: 15px;
@@ -141,6 +155,10 @@ main .h4 {
 
 
 @media screen and (min-width: 992px) {
+	main .container {
+	  font-size: 16px;
+	}
+
   main p,
   main .p {
       font-size: 16px;
@@ -188,6 +206,10 @@ main .h4 {
 
 
 @media screen and (min-width: 1400px) {
+	main .container {
+	  font-size: 18px;
+	}
+
   main p,
   main .p {
       font-size: 18px;
@@ -370,7 +392,6 @@ main .h4 {
 	color: #FFF;
 	background-color: #E44424;
 }
-
 
 .mqo-banner {
   background-repeat: no-repeat;
