@@ -42,9 +42,15 @@
 }
 
 /* default for xs screens*/ 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500);
+body {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
 main .container {
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 main .smaller-size {
@@ -54,12 +60,12 @@ main .smaller-size {
 main p,
 main .p {
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 main li {
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 main .lead {
@@ -72,7 +78,7 @@ main .btn {
   padding: 6px 12px;
   white-space: normal;
   word-wrap: break-word;
-  line-height: 1.33;
+  line-height: 1.4;
 }
 
 main .btn-lg {
@@ -103,7 +109,6 @@ main .h4 {
 @media screen and (min-width: 480px) {
 	main .container {
 	  font-size: 15px;
-	  line-height: 1.3;
 	}
 
 	main p,
@@ -122,9 +127,6 @@ main .h4 {
 	main .btn {
 	  font-size: 15px;
 	  padding: 8px 14px;
-	  white-space: normal;
-	  word-wrap: break-word;
-	  line-height: 1.33;
 	}
 	
 	main .btn-lg {
@@ -213,12 +215,10 @@ main .h4 {
   main p,
   main .p {
       font-size: 18px;
-      line-height: 1.4;
   }
 
 	main li {
 	  font-size: 18px;
-	  line-height: 1.4;
 	}
 
   main .lead {
