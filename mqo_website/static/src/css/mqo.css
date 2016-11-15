@@ -41,8 +41,24 @@
 	padding-bottom:32px;
 }
 
+/* tweak to make title bar taller */ 
+header a.navbar-brand.logo {
+  padding: 5px 15px;
+}
+
+.navbar-brand {
+  height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 /* default for xs screens*/ 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500);
 body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
