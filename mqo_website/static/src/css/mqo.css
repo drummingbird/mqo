@@ -59,6 +59,7 @@ header a.navbar-brand.logo {
 
 /* default for xs screens*/ 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500);
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
 body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
@@ -85,6 +86,8 @@ main li {
 }
 
 main .lead {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
 }
@@ -100,6 +103,19 @@ main .btn {
 main .btn-lg {
 	font-size: 18px;
 	padding: 10px 16px;
+}
+
+main h1,
+main .h1,
+main h2,
+main .h2,
+main h3,
+main .h3,
+main h4,
+main .h4
+{
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 main h1,
